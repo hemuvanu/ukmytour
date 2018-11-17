@@ -1,0 +1,49 @@
+h2{color:red}
+
+p{
+    color:white;
+}
+.pic{
+background-image: url("/assets/images/cbk.jpg");
+background-size: cover;
+height: auto;
+
+}
+.text{
+    color:greenyellow;
+    padding-top: 110px;
+    padding-left:60px
+}
+.text p{
+  color:#7c0a0a;
+   
+}
+
+.form{
+    padding-top: 110px;
+
+    
+}li{
+    list-style-type:none
+}
+.error{
+  color: red;
+}
+.mybtn{
+    margin-top: 20px;
+    margin-bottom: 20px};
+
+.img_paddings{
+    margin-bottom: 6px;
+  }
+  .text_align{
+    text-align: right;
+    color: antiquewhite;
+  }
+h6{color:powderblue}
+
+.img{padding-top: 20px}
+
+/* .footer{background-color:grey ;width:100%;height:100% } */
+.footer{padding-top: 20px ; color:white }
+.fu{text-align: center}

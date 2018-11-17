@@ -1,0 +1,283 @@
+<ng4-loading-spinner> </ng4-loading-spinner>
+
+<nav class="navbar navbar-light bg-dark">
+  <div class="row" style="width:100%">
+  <div  class="col-sm-6"> 
+
+  <a class="navbar-brand" href="#">
+      <img src="/assets/logo.png" style="height: 63px; border-radius: 50%;"alt="dsdsdsd">
+  </a>
+
+  </div>
+  <div  class="col-sm-6 text_align">
+        <span>+91-8077990871,+91-9219061344</span><br />
+        <span>tourmyuk@gmail.com</span>
+   
+  </div>
+
+</div>
+</nav>
+<div class="container-fluid pic">
+  <div class="row">
+    <div class="col-sm-7  text">
+      <h1>
+        <b>Welcome <span>TO GOFREEHOLIDAY</span></b>
+      </h1>
+    <!--   <h1>
+       
+      </h1> -->
+      <b><h3><p><i class="fa fa-beer" aria-hidden="true"></i>
+                               &nbsp;Welcome to Rishikesh</p> </h3>
+                               <p><i class="fa fa-plus-circle"></i>
+&nbsp;One night camping @1500/-pp.</p>
+<p><i class="fa fa-cutlery"></i>
+&nbsp;Breakfast,Lunch &amp; Dinner.</p>
+<p><i class="fa fa-life-ring"></i>
+&nbsp;Evening bonfire with snacks.</p>
+<p><i class="fa fa-info-circle"></i>
+&nbsp;Stay in riverside tents.</p>
+<p><i class="fa fa-info-circle"></i>
+&nbsp;River rafting.</p></b>
+    
+    </div>
+
+    <div class="col-sm-5">
+      <form name="contactform" [formGroup]="contactform" class="form" method="post" (submit)="contactformdetail()">
+        <!-- <div id="form-content"> -->
+         <h2 style="color:greenyellow;"> Query Form</h2>
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <label for="date-to"></label>
+            <div>
+              <!-- ::::{{f.name.errors.minlength}}{{f.name.errors.minlength}} -->
+              <input formControlName="name" class="form-control" type="text" placeholder="Name" required>
+              <p class="error" *ngIf="contactform.controls['name'].hasError('required') && isSubmited">
+                  name required
+               </p>
+               <p class="error" *ngIf="contactform.controls['name'].hasError('maxlength')">
+                Maximum 20 characters allowed
+              </p>
+              <p class="error" *ngIf="contactform.controls['name'].hasError('minlength')">
+               enter at leaset 3 characters
+              </p>
+              <p class="error" *ngIf="contactform.controls['name'].hasError('pattern')">
+                Invalid name
+              </p>
+            </div>
+          </div>
+           <!-- <label for="phone">Phone</label> -->
+          <div class="col-sm-6 form-group">
+            <label for="phone"></label>
+            <input id="phone" formControlName="phone" class="form-control" type="text" placeholder="Phone" required maxlength="10">
+            <p class="error" *ngIf="contactform.controls['phone'].hasError('required') && isSubmited">
+                phone required
+             </p>
+             <p class="error" *ngIf="contactform.controls['phone'].hasError('minlength')">
+              enter at leaset 10 number
+            </p>
+            <p class="error" *ngIf="contactform.controls['phone'].hasError('pattern')">
+              Invalid number
+            </p>
+            
+          </div>
+        </div>
+        <!--  <div class="group"> -->
+        <div class="row">
+          <div class="col-sm-6 form-group">
+             <label for="email"></label>
+            <input id="email" formControlName="email" class="form-control" type="email" placeholder="Email" required>
+            <p class="error" *ngIf="contactform.controls['email'].hasError('required') && isSubmited">
+                email required
+             </p>
+             <p class="error" *ngIf="contactform.controls['email'].hasError('pattern')">
+              Invalid Email
+            </p> 
+            
+          </div>
+
+
+  <!-- date -->
+          <div class="col-sm-6 form-group">
+            <label for="date-to"></label>
+            <div class="addon-right">
+              <input id="date" formControlName="date" class="form-control" type="date" required>
+              <p class="error" *ngIf="contactform.controls['date'].hasError('required') && isSubmited">
+                  date required
+               </p> 
+            </div>
+
+
+
+          </div>
+        </div>
+
+        <!--  <div class="group"> -->
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="date-to"></label>
+            <select id="adults" formControlName="adults" class="form-control">
+              <option value="">No of Adults</option>
+              <option value="1 Person">1 Person</option>
+              <option value="2 Persons">2 Persons</option>
+              <option value="3 Persons">3 Persons</option>
+              <option value="4 Persons">4 Persons</option>
+              <option value="5 Persons">5 Persons</option>
+              <option value="6 Persons">6 Persons</option>
+              <option value="7 Persons">7 Persons</option>
+              <option value="8 Persons">8 Persons</option>
+              <option value="Group">Group</option>
+
+            </select>
+            <p class="error" *ngIf="contactform.controls['adults'].hasError('required') && isSubmited">
+                adults required
+             </p> 
+          </div>
+
+
+          <div class="col-sm-6 form-group">
+            <!--  <label for="children">Children</label> -->
+            <label for="date-to"></label>
+            <div>
+              <select id="children" formControlName="children" class="form-control">
+                <option value="">No of kids</option>
+
+                <option value="0 kids">0 kids</option>
+                <option value="1 kids">1 kids</option>
+
+                <option value="2 kids">2 kids</option>
+
+                <option value="3 kids">3 kids</option>
+
+                <option value="4 kids">4 kids</option>
+
+                <option value="5 kids">5 kids</option>
+
+                <option value="6 kids">6 kids</option>
+
+                <option value="Group">Group</option>
+
+              </select>
+              <p class="error" *ngIf="contactform.controls['children'].hasError('required') && isSubmited">
+                  children required
+               </p> 
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 form-group">
+
+            <label for="date-to"></label>
+            <select id="select_budget" formControlName="SB" class="form-control">
+              <option value="">Select Your Budget</option>
+              <option value="Economical">Economical</option>
+              <option value="Standard">Standard</option>
+              <option value="Luxury">Luxury</option>
+            </select>
+            <p class="error" *ngIf="contactform.controls['SB'].hasError('required') && isSubmited">
+                select_budget required
+             </p> 
+            
+           
+            
+          </div>
+
+          <div class="col-sm-6 form-group">
+            <label for="date-to"></label>
+            
+                        <select id="select_package" formControlName="SP" class="form-control" placeholder="">
+                          <option value="">Select Tour Package</option>
+                          <option value="2N/3D Jim Corbet">Deluxe</option>
+                          <option value="3N/4D Jim Corbet">Super Deluxe</option>
+                          <option value="4N/5D Jim Corbet">Luxury</option>
+                        </select>
+                        <p class="error" *ngIf="contactform.controls['SP'].hasError('required') && isSubmited">
+                            select_package required
+                         </p> 
+            
+                       
+                      </div>
+        </div>
+
+        <!-- <div class="col-sm-12 form-group"> -->
+          <label for="your_message"></label>
+          <div>
+            <textarea id="your_message" formControlName="message" type="text" class="form-control" placeholder="Your message">
+               </textarea>
+               <!-- <p class="error" *ngIf="contactform.controls['message'].hasError('required') && isSubmited">
+                  message required
+               </p> -->
+              
+          </div>
+        <!-- </div> -->
+        <!-- <div class="col-sm-12 form-group submit"> -->
+
+          <label class="empty"></label>
+          <button class="btn btn-success mybtn" name="submit"  value="Submit">submit</button>
+        <!-- </div> -->
+
+        <div id="form-loading" class="hide">
+          <i class="fa fa-circle-o-notch fa-spin"></i>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+</div>
+<div class="container-fluid img">
+  <div class="row">
+    <div class="col-sm-4 img_paddings">
+      <img src="/assets/images/rishi.png" width="100%" height="300px" alt="image">
+    </div>
+    <div class="col-sm-4 img_paddings">
+      <img src="/assets/images/risi3.jpg" width="100%" height="300px" alt="image">
+    </div>
+    <div class="col-sm-4 img_paddings">
+      <img src="/assets/images/rishi2.jpg" width="100%" height="300px" alt="image">
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <nav class="navbar navbar-light bg-dark fu">
+   
+
+
+    <!-- <div class="social-icon">
+              <div class="col-md-4">
+                <ul class="social-network">
+                  <li><a href="#" class="fb tool-tip" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#" class="twitter tool-tip" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#" class="gplus tool-tip" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a href="#" class="linkedin tool-tip" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="#" class="ytube tool-tip" title="You Tube"><i class="fa fa-youtube-play"></i></a></li>
+                </ul>
+              </div>
+            </div> -->
+
+    <div class="col-md-12">
+      <div class="copyright" style="float:right;">
+        &copy; Company Theme. All Rights Reserved.
+        <div class="credits">
+          <!--
+                    All the links in the footer should remain intact.
+                    You can delete the links only if you purchased the pro version.
+                    Licensing information: https://bootstrapmade.com/license/
+                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Company
+                  -->
+          
+        </div>
+      </div>
+
+
+      <div class="pull-right">
+        <a href="#home" class="scrollup">
+          <i class="fa fa-angle-up fa-3x"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- <p>
+  corbett works!
+</p> -->
